@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 
-
 function Header({text, bgColor, textColor}) {
 
   const headerStyle = {

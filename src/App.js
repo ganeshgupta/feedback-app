@@ -7,6 +7,9 @@ import FeedbackForm from "./components/FeedbackForm"
 import FeedbackData from "./data/FeedBackData"
 import AboutPage from "./pages/AboutPage";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import AboutIconLink from "./components/AboutIconLink";
+
+
 
 function App(){
 
@@ -36,10 +39,11 @@ function App(){
                         <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
                         </>
                     }></Route>
+                    
                     <Route path='/about' element={<AboutPage/>} />
                 </Routes>
+                <AboutIconLink/>
             </div>
-
         </Router>
 
     )

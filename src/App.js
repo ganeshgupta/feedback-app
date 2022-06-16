@@ -8,6 +8,7 @@ import FeedbackData from "./data/FeedBackData"
 import AboutPage from "./pages/AboutPage";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import AboutIconLink from "./components/AboutIconLink";
+import {FeedbackProvider} from './context/FeedbackContext'
 
 
 
@@ -28,23 +29,25 @@ function App(){
     } 
 
     return (
-        <Router>
-            <Header />
-            <div className="container">
-                <Routes>
-                    <Route exact path='/' element={
-                        <>
-                        <FeedbackForm handleAdd={addFeedback} />
-                        <FeedbackStats feedback={feedback}/>
-                        <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
-                        </>
-                    }></Route>
-                    
-                    <Route path='/about' element={<AboutPage/>} />
-                </Routes>
-                <AboutIconLink/>
-            </div>
-        </Router>
+        <FeedbackProvider>
+            <Router>
+                <Header />
+                <div className="container">
+                    <Routes>
+                        <Route exact path='/' element={
+                            <>
+                            <FeedbackForm handleAdd={addFeedback} />
+                            <FeedbackStats feedback={feedback}/>
+                            <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+                            </>
+                        }></Route>
+                        
+                        <Route path='/about' element={<AboutPage/>} />
+                    </Routes>
+                    <AboutIconLink/>
+                </div>
+            </Router>
+        </FeedbackProvider>
 
     )
 }

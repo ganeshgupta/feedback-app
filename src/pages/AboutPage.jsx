@@ -10,7 +10,7 @@ function AboutPage() {
             <p>This is Feedback Portal </p>
             <p>Version: 1.0.0</p>
             <p>
-                <Link to="/">Goto Home Page</Link>
+                <Link to="/">Go-to Home Page</Link>
             </p>
         </div>
     </Card>

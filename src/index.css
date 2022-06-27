@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+:root {
+  --brand-color: #6366F1;
+  --dark-color: #1E293B;
+  --mid-color: #B8BFC6;
+  --light-color: #FFFFFF;
+    }
+
 
 * {
   box-sizing: border-box;
@@ -9,7 +16,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #202142;
+  /* background-color: var(--dark-color); */
+  background: conic-gradient(from .5turn at top right, darkseagreen, darkslategray);
   color: #fff;
   line-height: 1.6;
 }
@@ -35,7 +43,7 @@ header {
 
 .card {
   background-color: #fff;
-  color: #333;
+  color: var(--dark-color);
   border-radius: 15px;
   padding: 40px 50px;
   margin: 20px 0;
@@ -88,7 +96,7 @@ header {
 
 .rating li:hover,
 .num-display {
-  background: #ff6a95;
+  background: var(--brand-color);
   color: #fff;
 }
 
@@ -97,7 +105,7 @@ header {
 }
 
 [type='radio']:checked ~ label {
-  background: #ff6a95;
+  background: #6366F1;
   color: #fff;
 }
 
@@ -161,7 +169,7 @@ input:focus {
 }
 
 .btn-secondary {
-  background: #ff6a95;
+  background: #6366F1;
 }
 
 .btn:hover {
@@ -204,7 +212,7 @@ input:focus {
 }
 
 .about-link a:hover {
-  color: #ff6a95;
+  color: #6366F1;
 }
 
 .about h1 {

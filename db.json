@@ -24,6 +24,11 @@
       "text": "this is awesome, I recommend everyone. ",
       "rating": 8,
       "id": 8
+    },
+    {
+      "text": "This is awesome service ",
+      "rating": 9,
+      "id": 9
     }
   ]
 }
